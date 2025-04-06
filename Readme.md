@@ -79,7 +79,7 @@ MONGODB_URI: MongoDB connection string (default: mongodb://localhost:27017)
 MONGODB_DB_NAME: MongoDB database name (default: isstow)
 Deployment
 To deploy the application, ensure Docker and Docker Compose are installed on the target server. Then, run:
-
-```bash
-docker-compose up --build -d
+ ```bash
+docker build -t isstow .
+ docker run --privileged -p 80:80 -p 8000:8000 -d isstow
 ```
