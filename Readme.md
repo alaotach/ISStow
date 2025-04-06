@@ -20,7 +20,7 @@ ISStow is a backend and frontend application designed to manage item storage on 
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/alaotach/ISStow.git
 cd ISStow
 ```
 2. Build and Run the Application
