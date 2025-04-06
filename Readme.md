@@ -26,7 +26,10 @@ cd ISStow
 2. Build and Run the Application
 Use Docker file to build and run the services:
 ```bash
-docker build . 
+docker build -t isstow .
+```
+```bash
+ docker run --privileged -p 80:80 -p 8000:8000 -d isstow
 ```
 3. Access the Application
 Frontend: Open your browser and navigate to http://localhost.
