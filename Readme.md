@@ -24,9 +24,9 @@ git clone https://github.com/alaotach/ISStow.git
 cd ISStow
 ```
 2. Build and Run the Application
-Use Docker Compose to build and run the services:
+Use Docker file to build and run the services:
 ```bash
-docker-compose up --build
+docker build . 
 ```
 3. Access the Application
 Frontend: Open your browser and navigate to http://localhost.
