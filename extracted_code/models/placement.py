@@ -22,9 +22,9 @@ class ItemPlacement(BaseModel):
     width: Optional[float] = None
     depth: Optional[float] = None
     height: Optional[float] = None
-    priority: Optional[int] = None
-    expiryDate: Optional[str] = None
-    usageLimit: Optional[int] = None
+    priority: Optional[int] = 1
+    expiryDate: Optional[str] = '2025-04-07'
+    usageLimit: Optional[int] = 0
     preferredZone: Optional[str] = None
     allowNonPreferredZone: bool = True  # Allow placement in non-preferred zones by default
 
