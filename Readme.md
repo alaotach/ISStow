@@ -2,6 +2,9 @@
 
 ISStow is a backend and frontend application designed to manage item storage on the International Space Station. It provides an API built with FastAPI and a frontend served using Nginx.
 
+YOU CAN GET ALL API ENDPOINTS AND CHECK THEM OUT @ localhost:8000/docs
+and frontend at localhost:80
+
 ---
 
 ## Project Structure
