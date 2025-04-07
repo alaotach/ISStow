@@ -3,9 +3,9 @@ from typing import List, Optional
 from models.item import Coordinates, Position
 
 class PlacementBase(BaseModel):
-    itemId: str
-    containerId: str
-    position: Position
+    itemId: Optional[str] = None
+    containerId: Optional[str] = None
+    position: Optional[Position] = None
 
 class PlacementCreate(PlacementBase):
     pass
@@ -17,23 +17,23 @@ class PlacementInDB(PlacementBase):
         from_attributes = True
 
 class ItemPlacement(BaseModel):
-    itemId: str
-    name: str
-    width: float
-    depth: float
-    height: float
-    priority: int
-    expiryDate: str
-    usageLimit: int
-    preferredZone: str
+    itemId: Optional[str] = None
+    name: Optional[str] = None
+    width: Optional[float] = None
+    depth: Optional[float] = None
+    height: Optional[float] = None
+    priority: Optional[int] = None
+    expiryDate: Optional[str] = None
+    usageLimit: Optional[int] = None
+    preferredZone: Optional[str] = None
     allowNonPreferredZone: bool = True  # Allow placement in non-preferred zones by default
 
 class ContainerPlacement(BaseModel):
-    containerId: str
-    zone: str
-    width: float
-    depth: float
-    height: float
+    containerId: Optional[str] = None
+    zone: Optional[str] = None
+    width: Optional[float] = None
+    depth: Optional[float] = None
+    height: Optional[float] = None
 
 class PlacementRequest(BaseModel):
     items: List[ItemPlacement]
@@ -46,9 +46,9 @@ class PlacementResponse(BaseModel):
     rearrangements: List = []
 
 class RearrangementStep(BaseModel):
-    step: int
-    action: str  # "move", "remove", "place"
-    itemId: str
+    step: Optional[int] = None
+    action: Optional[str] = None  # "move", "remove", "place"
+    itemId: Optional[str] = None
     fromContainer: Optional[str] = None
     fromPosition: Optional[Position] = None
     toContainer: Optional[str] = None
